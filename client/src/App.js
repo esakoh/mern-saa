@@ -8,8 +8,6 @@ import Main from './pages/Main';
 import NaviLinks from './pages/NaviLinks';
 
 
-
-
 const App = () => {
     return (
      

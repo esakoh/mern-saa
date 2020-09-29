@@ -12,7 +12,7 @@ app.use(cors());
 
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
-app.use(express.static(path.join("public/index.html")))
+app.use(express.static('client/'));
 
 
 mongoose
@@ -24,7 +24,7 @@ mongoose
     console.log('Mongoose connected');
     console.log('Start Express server');
     app.get("*", (req, res) => {
-        res.sendFile(path.join("public"));
+        res.sendFile(path.join(__dirname + '/client/index.html'));
     });
     app.listen(PORT);
 })
