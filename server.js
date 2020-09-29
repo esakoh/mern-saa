@@ -23,9 +23,6 @@ mongoose
 .then(()=> {
     console.log('Mongoose connected');
     console.log('Start Express server');
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname + '/client/index.html'));
-    });
     app.listen(PORT);
 })
 .catch(err =>{
