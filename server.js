@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 var cors = require('cors');
 const data_controllers = require('./data_controllers');
@@ -11,6 +12,8 @@ app.use(cors());
 
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
+app.use(express.static(path.join("public/index.html")))
+
 
 mongoose
 .connect(dbRoute, {
@@ -20,6 +23,9 @@ mongoose
 .then(()=> {
     console.log('Mongoose connected');
     console.log('Start Express server');
+    app.get("*", (req, res) => {
+        res.sendFile(path.join("public"));
+    });
     app.listen(PORT);
 })
 .catch(err =>{
