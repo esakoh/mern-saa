@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 mongoose.set('useFindAndModify', false);
 
 app.get('/', (req, res) => {
-    res.sendFile( path.resolve('client/src/App.js') );
+    res.sendFile( path.resolve('client/src/index.js') );
   });
 
 
