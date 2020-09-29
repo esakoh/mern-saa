@@ -1,0 +1,47 @@
+.History {
+
+    text-align: center;
+
+}
+
+.div{
+    margin: auto;
+    
+    text-align: center;
+    width: 500px;
+    cursor: default;
+    padding: 7px;
+    position: relative;
+    justify-content:  center;
+    align-items: center; 
+    color:black; 
+
+}
+
+.form{
+    display: inline;
+}
+
+.button{
+    /* display:none; */
+    color: red;
+   
+    background: transparent;
+    font-size: 16;
+    text-decoration: none;
+
+    border: 0px solid transparent;
+
+}
+
+ .div:hover .button{
+    display: inline-block;
+    cursor: pointer;
+    
+
+} 
+
+
+
+
+

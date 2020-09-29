@@ -1,0 +1,34 @@
+.Main {
+
+    text-align: center;
+    min-width: 100vp;
+    display: inline-block;
+   
+
+}
+
+.Weather {
+
+    text-align: center;
+    padding: 10;
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 500px;
+    
+    max-width: 100%;
+
+    color: red;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+  height: 200px;
+  border: 0px; 
+  background-color: #222;
+         
+}
+
+.Header{
+    
+    display: inline-block;
+}
