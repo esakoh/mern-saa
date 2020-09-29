@@ -23,7 +23,6 @@ mongoose
 .then(()=> {
     console.log('Mongoose connected');
     console.log('Start Express server');
-    app.get("*")
     app.listen(PORT);
 })
 .catch(err =>{
@@ -41,7 +40,7 @@ app.use(bodyParser.json());
 mongoose.set('useFindAndModify', false);
 
 app.get('/', (req, res) => {
-    res.sendFile( path.resolve('client/src/index.js') );
+    res.sendFile( path.resolve('src', 'app', 'index.js') );
   });
 
 
