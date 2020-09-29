@@ -12,7 +12,7 @@ app.use(cors());
 
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
-app.use(express.static('client/'));
+app.use(express.static("client"));
 
 
 mongoose
@@ -23,6 +23,7 @@ mongoose
 .then(()=> {
     console.log('Mongoose connected');
     console.log('Start Express server');
+    app.get("*")
     app.listen(PORT);
 })
 .catch(err =>{
@@ -40,7 +41,7 @@ app.use(bodyParser.json());
 mongoose.set('useFindAndModify', false);
 
 app.get('/', (req, res) => {
-    res.send({ message: "We did it!" });
+    res.sendFile( path.resolve('client/src/index.js') );
   });
 
 
