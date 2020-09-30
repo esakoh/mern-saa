@@ -46,7 +46,7 @@ mongoose.set('useFindAndModify', false);
 app.use(express.static('client'));
 
 app.get("*",(req,res) => {
-    res.sendFile( path.join(__dirname,'client','src','index.js'))
+    res.sendFile( path.join(__dirname,'client','public','index.html'))
 })
 app.post('/putData', data_controllers.add_weather);
 app.get('/getData', data_controllers.get_weather);
