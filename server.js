@@ -13,8 +13,6 @@ app.use(cors());
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
 
-
-
 mongoose
 .connect(dbRoute, {
     useUnifiedTopology: true,
@@ -23,7 +21,7 @@ mongoose
 .then(()=> {
     console.log('Mongoose connected');
     console.log('Start Express server');
-   
+    app.listen(PORT);
 })
 .catch(err =>{
     console.log(err);
@@ -39,21 +37,21 @@ app.use(bodyParser.json());
 
 mongoose.set('useFindAndModify', false);
 
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile( path.resolve('client/public/index.html') );
-  });*/
+  });
 
 app.use(express.static('client'));
 
-app.get("*",(req,res) => {
-    res.sendFile( path.join(__dirname,'client','public','index.html'))
-})
+//app.get("*",(req,res) => {
+//    res.sendFile( path.join(__dirname,'client','public','index.html'))
+//})
 app.post('/putData', data_controllers.add_weather);
 app.get('/getData', data_controllers.get_weather);
 
 app.post('/removeData/', data_controllers.remove_weather);
 
-app.listen(PORT);
+
 
 
 
