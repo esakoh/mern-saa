@@ -12,11 +12,7 @@ app.use(cors());
 
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
-app.use(express.static('client'));
 
-app.get("*",(req,res) => {
-    res.sendFile( path.join(__dirname,'client','public','index.html'))
-})
 
 
 mongoose
@@ -47,7 +43,11 @@ mongoose.set('useFindAndModify', false);
     res.sendFile( path.resolve('client/public/index.html') );
   });*/
 
+  app.use(express.static('client'));
 
+  app.get("*",(req,res) => {
+      res.sendFile( path.join(__dirname,'client','public','index.html'))
+  })
 app.post('/putData', data_controllers.add_weather);
 app.get('/getData', data_controllers.get_weather);
 
