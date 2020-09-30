@@ -41,8 +41,8 @@ const server = createServer(app);
 mongoose.set('useFindAndModify', false);
 
 
-app.get('/', (req, res) => {
-    res.sendFile('index.html', { root: path.join(__dirname, 'client/public') });
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client','public','index.html'));
   });
 
 //app.use(express.static('client'));
