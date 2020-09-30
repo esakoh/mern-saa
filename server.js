@@ -36,6 +36,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const server = createServer(app);
+
 mongoose.set('useFindAndModify', false);
 
 
@@ -53,7 +55,7 @@ app.get('/getData', data_controllers.get_weather);
 
 app.post('/removeData/', data_controllers.remove_weather);
 
-const server = createServer(app)
+
 
 server.listen(PORT);
 
