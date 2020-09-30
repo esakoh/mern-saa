@@ -1,4 +1,4 @@
-
+const {createServer} = require('http');
 const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
@@ -36,7 +36,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
+const server = createServer(app);
 
 mongoose.set('useFindAndModify', false);
 
@@ -58,7 +58,7 @@ app.post('/removeData/', data_controllers.remove_weather);
 
 
 
-app.listen(PORT);
+server.listen(PORT);
 
 
 
