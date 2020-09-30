@@ -43,7 +43,7 @@ mongoose.set('useFindAndModify', false);
 app.use('/static', express.static(path.join(__dirname,'/client/build')))
 
 app.get('*', (req, res) => {
-    res.sendFile('index.html', { root: __dirname});
+    res.sendFile('/client/build/index.html', {root: __dirname});
   });
 
 //app.use(express.static('client'));
