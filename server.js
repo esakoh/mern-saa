@@ -43,7 +43,7 @@ mongoose.set('useFindAndModify', false);
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client','public','index.js'));
+    res.sendFile(path.resolve(__dirname, 'client','public','index.html'));
   });
 
 //app.use(express.static('client'));
