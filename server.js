@@ -40,17 +40,17 @@ const server = createServer(app);
 
 mongoose.set('useFindAndModify', false);
 
-app.use('/static', express.static(path.join(__dirname,'/client/build')))
+app.use(express.static(path.join(__dirname,'client','build')))
 
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
     res.sendFile('/client/build/index.html', {root: __dirname});
-  });
+  });*/
 
 //app.use(express.static('client'));
 
-//app.get("*",(req,res) => {
-//    res.sendFile( path.join(__dirname,'client','public','index.html'))
-//})
+app.get("/",(req,res) => {
+    res.sendFile(path.join(__dirname,'client','build','index.html'))
+})
 app.post('/putData', data_controllers.add_weather);
 app.get('/getData', data_controllers.get_weather);
 
