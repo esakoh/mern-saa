@@ -40,7 +40,7 @@ const server = createServer(app);
 
 mongoose.set('useFindAndModify', false);
 
-express.static(path_join(__dirname, './client/build'))
+express.static(path_join(__dirname, '/client/build'))
 
 app.get('*', (req, res) => {
     res.sendFile('index.html', { root: __dirname});
