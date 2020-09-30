@@ -40,10 +40,10 @@ const server = createServer(app);
 
 mongoose.set('useFindAndModify', false);
 
-app.use(express.static(__dirname+'/build'));
+
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client','public','index.html'));
+    res.sendFile(path.resolve(__dirname, 'client','public','index.js'));
   });
 
 //app.use(express.static('client'));
