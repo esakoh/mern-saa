@@ -43,11 +43,11 @@ mongoose.set('useFindAndModify', false);
     res.sendFile( path.resolve('client/public/index.html') );
   });*/
 
-  app.use(express.static('client'));
+app.use(express.static('client'));
 
-  app.get("*",(req,res) => {
-      res.sendFile( path.join(__dirname,'client','public','index.html'))
-  })
+app.get("*",(req,res) => {
+    res.sendFile( path.join(__dirname,'client','src','index.js'))
+})
 app.post('/putData', data_controllers.add_weather);
 app.get('/getData', data_controllers.get_weather);
 
