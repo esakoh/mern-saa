@@ -37,9 +37,9 @@ app.use(bodyParser.json());
 
 mongoose.set('useFindAndModify', false);
 
-//app.get('/', (req, res) => {
-//    res.sendFile( path.resolve('client/public/index.html') );
-//  });
+app.get('/', (req, res) => {
+   res.sendFile( path.resolve('client/public/index.html') );
+  });
 
 //app.use(express.static('client'));
 
