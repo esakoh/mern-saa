@@ -1,3 +1,4 @@
+const {createServer} = require('http');
 const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
@@ -37,6 +38,7 @@ app.use(bodyParser.json());
 
 mongoose.set('useFindAndModify', false);
 
+
 app.get('/', (req, res) => {
    res.sendFile( path.resolve('client/public/index.html') );
   });
@@ -51,7 +53,9 @@ app.get('/getData', data_controllers.get_weather);
 
 app.post('/removeData/', data_controllers.remove_weather);
 
-app.listen(PORT);
+const server = createServer(app)
+
+server.listen(PORT);
 
 
 
