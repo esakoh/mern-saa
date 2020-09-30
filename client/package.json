@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "NODE_PATH=src react-scripts build"
   },
   "proxy": "https://localhost:8080"
 }
