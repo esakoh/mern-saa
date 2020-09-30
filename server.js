@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
-const path = require('path');
+//const path = require('path');
 const bodyParser = require('body-parser');
 var cors = require('cors');
 const data_controllers = require('./data_controllers');
@@ -37,11 +37,11 @@ app.use(bodyParser.json());
 
 mongoose.set('useFindAndModify', false);
 
-app.get('/', (req, res) => {
-    res.sendFile( path.resolve('client/public/index.html') );
-  });
+//app.get('/', (req, res) => {
+//    res.sendFile( path.resolve('client/public/index.html') );
+//  });
 
-app.use(express.static('client'));
+//app.use(express.static('client'));
 
 //app.get("*",(req,res) => {
 //    res.sendFile( path.join(__dirname,'client','public','index.html'))
