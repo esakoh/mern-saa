@@ -38,15 +38,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use((req,res,next)=>{
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    if(req.method ==='OPTION'){
-        res.header("Access-Control-Allow-Methods", 'GET,POST,PUT,DELETE,PATCH');
-        return res.status(200).json({});
-    }
-    next();
-});
+
 
 mongoose.set('useFindAndModify', false);
 
@@ -65,7 +57,7 @@ app.post('/putData', data_controllers.add_weather);
 app.get('/getData',data_controllers.get_weather);
 
 app.post('/removeData/',data_controllers.remove_weather);
-app.options('*', cors());
+
 
 
 
