@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-var cors = require('cors');
+
 const data_controllers = require('./data_controllers');
 
 const PORT = process.env.PORT || 8080;
 
 app = express();
-app.use(cors());
+
 
 const dbRoute = process.env.DATABASE_URI;
 
