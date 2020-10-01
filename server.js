@@ -22,6 +22,7 @@ mongoose
 .then(()=> {
     console.log('Mongoose connected');
     console.log('Start Express server');
+    app.listen(PORT);
     
 })
 .catch(err =>{
@@ -58,7 +59,7 @@ app.post('/removeData/', data_controllers.remove_weather);
 
 
 
-app.listen(PORT);
+
 
 
 
