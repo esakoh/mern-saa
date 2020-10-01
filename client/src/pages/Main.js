@@ -72,7 +72,7 @@ handleInput = e => {
         .catch(error => {
             console.log(error);
             this.setState({
-                city: "placea ei löydy!", 
+                city: "paikkaa ei löydy!", 
                 deg : "", 
                 img: "",
                 wind: "",
@@ -83,7 +83,7 @@ handleInput = e => {
 
     onSubmit = () => {
         this.setState({showButton:false});
-        axios.post('http://localhost:8080/putData',{ //viedään data tietokantaan
+        axios.post('/putData',{ //viedään data tietokantaan
             time: this.state.time,
             city: this.state.city,
             deg: this.state.deg,

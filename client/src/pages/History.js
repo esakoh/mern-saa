@@ -28,7 +28,7 @@ class History extends React.Component {
       
 
       getDataFromDb = () => {
-        axios.get('http://localhost:8080/getData/').then((response)=>
+        axios.get('/getData/').then((response)=>
     
             {            
                   const data = response.data.weathers
@@ -47,7 +47,7 @@ class History extends React.Component {
                     deg={weather.deg}
                     wind={weather.wind}>
                              
-                    <form action="http://localhost:8080/removeData/" method="POST" className="form">
+                    <form action="/removeData/" method="POST" className="form">
                     <input type="hidden" name="weather_id" value={weather._id} />
                   
                     {this.state.show ?<button type="submit" className="button" >X</button> :null}
