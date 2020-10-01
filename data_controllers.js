@@ -16,7 +16,7 @@ const add_weather = (req, res, next) => {
 const remove_weather = (req, res) => { 
   const weather_to_delete = req.body.weather_id;
   Weather.findByIdAndRemove(weather_to_delete).then(() => {
-    res.redirect('http://localhost:3000/history');
+    res.redirect('/history');
   });
 };
 
