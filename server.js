@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 app = express();
 
 
-const dbRoute = process.env.DATABASE_URI;
+const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
 
 mongoose
