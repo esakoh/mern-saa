@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 
 app = express();
 app.use(cors());
-const router = express.Router();
+
 
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
@@ -67,7 +67,7 @@ app.get('/getData',data_controllers.get_weather);
 app.post('/removeData/',data_controllers.remove_weather);
 app.options('*', cors());
 
-app.use('/api', router);
+
 
 
 
