@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-
+var cors = require('cors');
 const data_controllers = require('./data_controllers');
 
 const PORT = process.env.PORT || 8080;
@@ -52,10 +52,10 @@ app.use(express.static(path.join(__dirname,'client','build')))
 app.get("/",(req,res) => {
     res.sendFile(path.join(__dirname,'client','build','index.html'))
 })
-app.post('/putData', data_controllers.add_weather);
-app.get('/getData', data_controllers.get_weather);
+app.post('/putData', cors(), data_controllers.add_weather);
+app.get('/getData', cors(),data_controllers.get_weather);
 
-app.post('/removeData/', data_controllers.remove_weather);
+app.post('/removeData/', cors(),data_controllers.remove_weather);
 
 
 
