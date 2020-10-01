@@ -9,7 +9,7 @@ const data_controllers = require('./data_controllers');
 const PORT = process.env.PORT || 8080;
 
 app = express();
-
+app.use(cors());
 
 const dbRoute = 'mongodb+srv://dbUser:ku5suqAB5GJAMl2g@cluster0.n1pim.mongodb.net/react-saa?retryWrites=true&w=majority';
 
