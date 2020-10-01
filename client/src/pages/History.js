@@ -47,7 +47,7 @@ class History extends React.Component {
                     deg={weather.deg}
                     wind={weather.wind}>
                              
-                    <form action="/removeData/" method="POST" className="form">
+                    <form action="http://localhost:8080/removeData/" method="POST" className="form">
                     <input type="hidden" name="weather_id" value={weather._id} />
                   
                     {this.state.show ?<button type="submit" className="button" >X</button> :null}
