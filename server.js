@@ -57,6 +57,7 @@ app.post('/putData', cors(), data_controllers.add_weather);
 app.get('/getData', cors(),data_controllers.get_weather);
 
 app.post('/removeData/', cors(),data_controllers.remove_weather);
+app.options('*', cors())
 
 app.use('/api', router);
 
