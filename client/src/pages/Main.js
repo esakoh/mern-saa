@@ -42,7 +42,7 @@ class Main extends Component {
 }
 
 //pikavalintojen kaupunkien haku
-handleInput = e => { 
+handleInput = (e) => { 
     this.place = e.target.value;
     this.setState({place: this.place});  
     this.onClick();

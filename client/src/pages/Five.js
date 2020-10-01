@@ -100,7 +100,7 @@ onKeyUP= (e) => {
         .catch(error => {
             console.log(error);
             this.setState({
-            city:"placea ei löydy!",
+            city:"paikkaa ei löydy!",
             deg1: "",
             deg2: "", 
             deg3: "", 
