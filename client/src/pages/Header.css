@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   position: sticky;
+  overflow: scroll;
 
   z-index: 5;
   background-color: #222;
