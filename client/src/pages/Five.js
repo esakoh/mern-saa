@@ -5,6 +5,7 @@ import axios from 'axios';
 import moment from 'moment';
 import 'moment/locale/fi'; //päivämäärä suomen viikonpäiväksi
 import FadeIn from 'react-fade-in'; //häivytysefekti
+import Radium from 'radium';
 
 import './Five.css';
 
@@ -129,14 +130,16 @@ onKeyUP= (e) => {
             background: 'transparent',
             font: '16',
             cursor: 'pointer',
-            border: '0px solid black'
+            border: '0px solid black',
+            ':hover': {
+                color: 'red',
+              } 
         
         };
         const city = this.state.city;
        
         //muunnetaan päivämäärä viikonpäiväksi
-        const date1 = moment(this.state.date1).format("dddd");
-        
+        const date1 = moment(this.state.date1).format("dddd");       
         const date2 = moment(this.state.date2).format("dddd");
         const date3 = moment(this.state.date3).format("dddd");
         const date4 = moment(this.state.date4).format("dddd");
@@ -170,11 +173,12 @@ onKeyUP= (e) => {
    
     <h1>Viiden päivän ennuste</h1> <br />
 
-    <button style={style} onClick={this.handleInput} value="kauhajoki">Kauhajoki</button>
-    <button style={style} onClick={this.handleInput} value="turku">Turku</button>
-    <button style={style} onClick={this.handleInput} value="tampere">Tampere</button>
-    <button style={style} onClick={this.handleInput} value="helsinki">Helsinki</button>
-    <button style={style} onClick={this.handleInput} value="oulu">Oulu</button>
+        
+    <button key={1} style={style} onClick={this.handleInput} value="kauhajoki">Kauhajoki</button>
+    <button key={2} style={style} onClick={this.handleInput} value="turku">Turku</button>
+    <button key={3} style={style} onClick={this.handleInput} value="tampere">Tampere</button>
+    <button key={4} style={style} onClick={this.handleInput} value="helsinki">Helsinki</button>
+    <button key={5} style={style} onClick={this.handleInput} value="oulu">Oulu</button>
     
     <br/><br/><br/>
     <input type="text" onChange={this.handleChange} onKeyPress={this.onKeyUP} placeholder="Anna kaupungin nimi"/>
@@ -215,4 +219,4 @@ onKeyUP= (e) => {
     }
 
 }
-export default Five;
+export default Radium(Five);

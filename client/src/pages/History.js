@@ -5,6 +5,7 @@ import FadeIn from 'react-fade-in'; //häivytysefekti
 
 
 
+
 import './History.css';
 
 
@@ -16,16 +17,17 @@ class History extends React.Component {
         
         this.state = {
         weathers: [],
-        show: false
-       
+        show: false,
+        
         };     
+        this.buttonShow = this.buttonShow.bind(this);
   }
 
       componentDidMount = () => {
+        
         this.getDataFromDb();
       };
 
-      
 
       getDataFromDb = () => {
         axios.get('/getData/').then((response)=>
@@ -51,6 +53,7 @@ class History extends React.Component {
                     <input type="hidden" name="weather_id" value={weather._id} />
                   
                     {this.state.show ?<button type="submit" className="button" >X</button> :null}
+                    {this.state.show2 ?<button type="submit" className="button" >X</button> :null}
 
                     
                     </form>
@@ -70,6 +73,7 @@ class History extends React.Component {
                 console.log(error);
                
             });  
+            
 
             
         }
@@ -81,11 +85,12 @@ class History extends React.Component {
         }
 
         buttonShow = () =>{ //poistoruksin näyttäminen
+          this.getDataFromDb();
           this.setState({
             show: !this.state.show
             
           });
-          this.getDataFromDb();
+          
          
          
         }

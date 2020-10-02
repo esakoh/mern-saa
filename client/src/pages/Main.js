@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import getTime from '../scripts/Time'; //tämänhetkisen ajan haku
 import FadeIn from 'react-fade-in'; //häivytysefekti
+import Radium from 'radium';
 
 import './Main.css';
 
@@ -105,10 +106,14 @@ handleInput = (e) => {
         const style = {
             color: 'black',
             background: 'transparent',
-            font: '16',
             cursor: 'pointer',
-            border: '0px'
-        
+            font: '16',
+            border: '0px',
+            ':hover': {
+                color: 'red',
+              } 
+
+
         };
        
         const city = this.state.city;
@@ -121,11 +126,11 @@ handleInput = (e) => {
     <div className="Main">
  
     <h1>Päivän sää</h1> <br />
-    <button style={style} onClick={this.handleInput} value="kauhajoki">Kauhajoki</button>
-    <button style={style} onClick={this.handleInput} value="turku">Turku</button>
-    <button style={style} onClick={this.handleInput} value="tampere">Tampere</button>
-    <button style={style} onClick={this.handleInput} value="helsinki">Helsinki</button>
-    <button style={style} onClick={this.handleInput} value="oulu">Oulu</button>
+    <button key={1} style={style} onClick={this.handleInput} value="kauhajoki">Kauhajoki</button>
+    <button key={2} style={style} onClick={this.handleInput} value="turku">Turku</button>
+    <button key={3} style={style} onClick={this.handleInput} value="tampere">Tampere</button>
+    <button key={4} style={style} onClick={this.handleInput} value="helsinki">Helsinki</button>
+    <button key={5} style={style} onClick={this.handleInput} value="oulu">Oulu</button>
     
    
     <br /><br /><br />
@@ -150,4 +155,4 @@ handleInput = (e) => {
 
 }
 
-export default Main;
+export default Radium(Main);
