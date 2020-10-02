@@ -5,7 +5,9 @@
     width: 100%;
     position: fixed;
     justify-content: top;
- 
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    
 }
 
 .Card {

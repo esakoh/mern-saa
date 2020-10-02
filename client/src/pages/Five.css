@@ -1,10 +1,12 @@
 .Main {
 
     text-align: center;
-    min-width: 100vp;
+    min-width: 50vp;
+    height: 100%;
     display: inline-block;
-   
+  
 
+    -webkit-overflow-scrolling: touch;
 }
 
 .Weather {
