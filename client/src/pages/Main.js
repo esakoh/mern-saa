@@ -134,21 +134,21 @@ handleInput = (e) => {
     
    
     <br /><br /><br />
-    <input type="text" name="deg" onChange={this.handleChange} onKeyPress={this.onKeyUP} placeholder="Anna kaupungin nimi"/>
+    <input type="text" name="deg" onChange={this.handleChange} onKeyPress={this.onKeyUP} placeholder="Anna kaupungin nimi"/> 
     <button onClick={this.onClick}>Hae</button>
-    <br /> <br />
+
+    <br /><br />
     <FadeIn>
     <div className="Card">
     <h2>{city}</h2>
     <br /><br />
-    {deg} <img src={img} alt=""/> {wind}<br />
-    
-    <br /><br /><br />
+    {deg} <img src={img} alt=""/> {wind}<br /> 
+    <br />
   
-    {this.state.showButton ? <button onClick={this.onSubmit} type="submit">Tallenna</button> :null}
-
     </div><br />
     </FadeIn>
+    <br />
+    {this.state.showButton ? <button onClick={this.onSubmit} type="submit">Tallenna</button> : <button disabled>Tallennettu</button>} 
     </div>);
 
     }

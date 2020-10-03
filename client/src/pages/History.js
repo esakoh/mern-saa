@@ -101,8 +101,8 @@ class History extends React.Component {
     <h1>Säähistoria</h1>
 
 <br />
-<button onClick={this.buttonShow}>Poista</button>
 <button onClick={this.sortValues}>Järjestä</button>
+<button onClick={this.buttonShow}>Poista</button>
 
 <br /><br />
 <FadeIn>
