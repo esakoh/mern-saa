@@ -147,7 +147,7 @@ handleInput = (e) => {
   
     {this.state.showButton ? <button onClick={this.onSubmit} type="submit">Tallenna</button> :null}
 
-    </div>
+    </div><br />
     </FadeIn>
     </div>);
 

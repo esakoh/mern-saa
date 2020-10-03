@@ -1,11 +1,13 @@
 .Main {
 
     text-align: center;
-    min-width: 50vp;
+    width: 500px;
+    min-width: 500px;
     max-width: 100%;
     height: auto;
-    display: inline-block;
+    display:inline-block;
     position: relative;
+    margin: auto;
 
     
 }
@@ -30,9 +32,4 @@
     background-color: #222;
    
          
-}
-
-.Header{
-    
-    display: inline-block;
 }
