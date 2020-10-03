@@ -1,14 +1,14 @@
 .Main {
  
     text-align: center;
-    height: auto;
+    height:100%;
     width: 100%;
     max-width: 100%;
     min-width: 300px;
     position: fixed;
-    
     display: inline-block;
     align-items: center;
+
   
     
 }
@@ -16,7 +16,6 @@
 .Card {
    
     margin: auto;
-  
     border-radius: 25px;  
     width: 300px;
     height: 180px;
