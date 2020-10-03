@@ -2,7 +2,7 @@
 .nav-links {
   list-style: none;
   margin: auto;
-  padding: 0;
+  padding: 5;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -10,7 +10,6 @@
   overflow: hidden;
   justify-content:  center;
   align-items: center;
-  position: sticky;
   
   }
 
