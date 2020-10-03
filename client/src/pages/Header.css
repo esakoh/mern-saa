@@ -1,7 +1,6 @@
 .header {
-  
-  max-width: 100%;
-  min-width: 100%;
+  width: calc(100% - 20px);
+  max-width: 100%; 
   height: 60px;
   display: flex;
   align-items: center;
@@ -10,6 +9,7 @@
   margin: auto;
   padding: 10px;
   color: white;
+  position: sticky;
     
 }
 
