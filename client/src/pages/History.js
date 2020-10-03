@@ -79,10 +79,8 @@ class History extends React.Component {
         }
         sortValues = () => {
          this.setState({
-          weathers: [...this.state.weathers].sort((a, b) => a - b)
-         });
-                     
-        }
+          weathers: [...this.state.weathers].reverse()
+        })}
 
         buttonShow = () =>{ //poistoruksin näyttäminen
           this.getDataFromDb();

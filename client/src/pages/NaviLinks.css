@@ -3,6 +3,7 @@
   list-style: none;
   margin: auto;
   padding: 0;
+  width: 100%;
   max-width: 100%;
   height: auto;
   display: flex;
