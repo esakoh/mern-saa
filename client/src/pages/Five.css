@@ -15,9 +15,9 @@
     text-align: center;
     padding: 10;
     display: inline-flex;
-    justify-content: space-evenly;
-    width: 500px;
     
+    width: 500px;
+    min-width: 500px;
     max-width: 100%;
 
     color: red;
@@ -28,6 +28,7 @@
     height: 200px;
     border: 0px; 
     background-color: #222;
+   
          
 }
 
