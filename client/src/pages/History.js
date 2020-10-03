@@ -53,9 +53,7 @@ class History extends React.Component {
                     <input type="hidden" name="weather_id" value={weather._id} />
                   
                     {this.state.show ?<button type="submit" className="button" >X</button> :null}
-                    {this.state.show2 ?<button type="submit" className="button" >X</button> :null}
 
-                    
                     </form>
                     
                     </Weather>

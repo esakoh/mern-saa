@@ -2,13 +2,14 @@
 
     text-align: center;
     width: 500px;
-    min-width: 500px;
-    max-width: 100%;
+   
+    
     height:100%;
     display:inline-block;
     position: relative;
     margin: auto;
-    overflow: hidden;
+    
+    white-space: nowrap;
    
 
     
@@ -19,11 +20,9 @@
     text-align: center;
     padding: 10;
     display: inline-flex;
-    
-    width: 500px;
+    white-space: nowrap;
     min-width: 500px;
-    max-width: 100%;
-
+    overflow: hidden;
     color: red;
     padding: 30px;
     margin: auto;

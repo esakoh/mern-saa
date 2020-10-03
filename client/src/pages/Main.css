@@ -5,7 +5,8 @@
     width: 100%;
     max-width: 100%;
     min-width: 300px;
-    position: relative;
+    position: fixed;
+    display: inline-block;
     align-items: center;
 
   
