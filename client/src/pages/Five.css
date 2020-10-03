@@ -2,7 +2,8 @@
 
     text-align: center;
     min-width: 50vp;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     display: inline-block;
     position: relative;
 
