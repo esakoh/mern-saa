@@ -213,8 +213,10 @@ onKeyUP= (e) => {
    
     </div>
     </FadeIn>
-
-    </div> );
+    <br />
+    </div> 
+    
+    );
 
     }
 

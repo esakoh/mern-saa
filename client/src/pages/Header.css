@@ -3,7 +3,9 @@
   height: 50px;
   display: flex;
   align-items: center;
+  z-index: 5;
   background-color: #222;
+  
   padding: 10px;
   color: white;
     
