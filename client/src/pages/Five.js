@@ -92,11 +92,11 @@ onKeyUP= (e) => {
             img4: "https://openweathermap.org/img/wn/"+response.data.list[24].weather[0].icon+"@2x.png",
             img5: "https://openweathermap.org/img/wn/"+response.data.list[32].weather[0].icon+"@2x.png",
             
-            wind1: "Tuuli: "+response.data.list[0].wind.speed+" m/s",
-            wind2: "Tuuli: "+response.data.list[8].wind.speed+" m/s",
-            wind3: "Tuuli: "+response.data.list[16].wind.speed+" m/s",
-            wind4: "Tuuli: "+response.data.list[24].wind.speed+" m/s",
-            wind5: "Tuuli: "+response.data.list[32].wind.speed+" m/s"});
+            wind1: response.data.list[0].wind.speed+" m/s",
+            wind2: response.data.list[8].wind.speed+" m/s",
+            wind3: response.data.list[16].wind.speed+" m/s",
+            wind4: response.data.list[24].wind.speed+" m/s",
+            wind5: response.data.list[32].wind.speed+" m/s"});
         })
         .catch(error => {
             console.log(error);

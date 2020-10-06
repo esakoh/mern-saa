@@ -42,13 +42,15 @@ mongoose.set('useFindAndModify', false);
 
 //app.use(express.static(path.join(__dirname,'client','build')))
 
+//kerrotaan index.html-tiedoston sijainti käännetyssä versiossa
+
 app.get("/",(req,res) => {
     res.sendFile(path.join(__dirname,'client','build','index.html'))
 })
-app.post('/putData', data_controllers.add_weather);
-app.get('/getData',data_controllers.get_weather);
+app.post('/putData', data_controllers.add_weather); //datan lisäys kantaan
+app.get('/getData',data_controllers.get_weather); //datan haku
 
-app.post('/removeData',data_controllers.remove_weather);
+app.post('/removeData',data_controllers.remove_weather); //yksittäisen tietueen poisto
 
 
 
