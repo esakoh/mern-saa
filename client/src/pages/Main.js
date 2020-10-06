@@ -64,7 +64,7 @@ handleInput = (e) => {
             city: response.data.name, 
             deg: response.data.main.temp+"\u00B0", 
             img: "https://openweathermap.org/img/wn/"+response.data.weather[0].icon+"@2x.png",
-            wind: "Tuuli: "+response.data.wind.speed+" m/s",
+            wind: response.data.wind.speed+" m/s",
             showButton:true
             
             },
