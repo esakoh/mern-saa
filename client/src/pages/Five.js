@@ -5,7 +5,7 @@ import axios from 'axios';
 import moment from 'moment';
 import 'moment/locale/fi'; //päivämäärä suomen viikonpäiväksi
 import FadeIn from 'react-fade-in'; //häivytysefekti
-import Radium from 'radium';
+import Radium from 'radium'; //pikavalintojen hover-efekti
 
 import './Five.css';
 

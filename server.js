@@ -1,5 +1,3 @@
-
-
 const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
@@ -36,19 +34,11 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
-
 mongoose.set('useFindAndModify', false);
 
 //tiedostojen haku käännetyssä versiossa
-
 app.use(express.static(path.join(__dirname,'client','build')))
 
-
-
-/* app.get("/",(req,res) => {
-    res.sendFile(path.join(__dirname,'client','build','index.html'))
-}) */
 app.post('/putData', data_controllers.add_weather); //datan lisäys kantaan
 app.get('/getData',data_controllers.get_weather); //datan haku
 

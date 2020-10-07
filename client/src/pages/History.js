@@ -3,9 +3,6 @@ import axios from 'axios';
 import Weather from "./Weather";
 import FadeIn from 'react-fade-in'; //häivytysefekti
 
-
-
-
 import './History.css';
 
 
