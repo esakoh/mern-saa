@@ -163,10 +163,7 @@ onKeyUP= (e) => {
         const wind4 = this.state.wind4;
         const wind5 = this.state.wind5;
 
-       
-      
-        
-
+ 
     return (
     <div className="Main">
     <div>
