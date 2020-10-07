@@ -100,9 +100,6 @@ handleInput = (e) => {
         
     }
 
-   
-    
- 
     render() {
         //pikavalintanappien tyyli
         const style = {
