@@ -40,9 +40,11 @@ app.use(bodyParser.json());
 
 mongoose.set('useFindAndModify', false);
 
-app.use(express.static(path.join(__dirname,'client','build')))
+//tiedostojen haku käännetyssä versiossa
 
-//tiedostojen nouto käännetyssä versiossa
+app.use(express.static(path.join(__dirname,'client')))
+
+
 
 /* app.get("/",(req,res) => {
     res.sendFile(path.join(__dirname,'client','build','index.html'))
