@@ -148,7 +148,6 @@ handleInput = (e) => {
     </FadeIn>
     {this.state.showButton ? <button onClick={this.onSubmit} type="submit">Tallenna</button> : <button disabled>Tallennettu</button>} 
     <br />
-    <div></div>
     </div>);
 
     }
