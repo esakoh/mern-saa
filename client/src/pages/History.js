@@ -68,9 +68,7 @@ class History extends React.Component {
                 console.log(error);
                
             });  
-            
 
-            
         }
         sortValues = () => {
          this.setState({
@@ -83,9 +81,7 @@ class History extends React.Component {
             show: !this.state.show
             
           });
-          
-         
-         
+
         }
 
  render() {
