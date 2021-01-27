@@ -47,6 +47,14 @@
       align-items: center;
       white-space: normal;
       }
+
+      .nav-links a {
+        border: 0.3px solid transparent;
+        color: red;
+        text-decoration: none;
+        padding: 0.1rem;
+        
+      }
   }
  
 
