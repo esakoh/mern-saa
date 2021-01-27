@@ -111,7 +111,7 @@ handleInput = (e) => {
             font: '16',
             border: '1px',
             ':hover': {
-                color: 'red',
+                color: 'white',
               },
             ':focus':{
                 outline:'none',

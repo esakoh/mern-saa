@@ -132,7 +132,7 @@ onKeyUP= (e) => {
             cursor: 'pointer',
             border: '0px solid black',
             ':hover': {
-                color: 'red',
+                color: 'white',
               },
             ':focus':{
                 outline:'none',
