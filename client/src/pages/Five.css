@@ -30,3 +30,27 @@
    
          
 }
+
+@media only screen and (max-width: 600px) {
+    
+    .Weather {
+
+        text-align: center;
+        padding: 10;
+        display: inline-flex;
+        overflow: hidden;
+        width: 500px;
+        color: red;
+        padding: 4px;
+        margin: auto;
+        text-align:match-parent;
+        border-radius: 25px;
+        height: 180px;
+        border: 0px; 
+        background-color: #222;
+        position: sticky;
+       
+             
+    }
+
+}
