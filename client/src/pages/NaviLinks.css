@@ -32,7 +32,7 @@
   }
   
  
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 658px) {
     .nav-links {
       list-style: none;
       margin: auto;
