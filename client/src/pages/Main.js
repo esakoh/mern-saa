@@ -116,8 +116,7 @@ handleInput = (e) => {
             ':focus':{
                 outline:'none',
             },
-           
-            
+    
         };
        
         const city = this.state.city;
