@@ -24,15 +24,16 @@ class Main extends Component {
     wind: '',
     place:'', //apu
     showButton: true, //tallenna-napin näkyvyys
+    
     };  
- }
 
+ }
 
  componentDidMount() { //kun sivu ladataan haetaan oletuksena Seinäjoen tiedot
   
     this.place='seinajoki';
-    this.onClick();  
-    
+    this.onClick(); 
+      
     }
 
    
@@ -40,12 +41,13 @@ class Main extends Component {
     this.place = e.target.value; 
     this.setState({place: this.place});
     
+    
 }
 
 //pikavalintojen kaupunkien haku
 handleInput = (e) => { 
     this.place = e.target.value;
-    this.setState({place: this.place});  
+    this.setState({place: this.place});
     this.onClick();
 }
 
@@ -119,7 +121,7 @@ handleInput = (e) => {
         const deg = this.state.deg;
         const img = this.state.img;
         const wind = this.state.wind;
-      
+       
 
     return (
     <div className="Main">
@@ -148,10 +150,11 @@ handleInput = (e) => {
     </FadeIn>
     {this.state.showButton ? <button onClick={this.onSubmit} type="submit">Tallenna</button> : <button disabled>Tallennettu</button>} 
     <br />
-    </div>);
-
+    </div>
+  );
+  
     }
-
+    
 }
 
 export default Radium(Main);

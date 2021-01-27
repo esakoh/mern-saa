@@ -5,11 +5,9 @@ const Header = (props) =>{
 
   return (
         <header className="header">
-          <p className="header-title">Sääsovellus</p>
+          <p className="header-title">MERN-sää</p>
           {props.children}
         </header>
-
-   
      
       );
   
