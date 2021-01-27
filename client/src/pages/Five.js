@@ -133,7 +133,10 @@ onKeyUP= (e) => {
             border: '0px solid black',
             ':hover': {
                 color: 'red',
-              } 
+              },
+            ':focus':{
+                outline:'none',
+              }, 
         
         };
         const city = this.state.city;

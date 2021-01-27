@@ -109,12 +109,15 @@ handleInput = (e) => {
             background: 'transparent',
             cursor: 'pointer',
             font: '16',
-            border: '0px',
+            border: '1px',
             ':hover': {
                 color: 'red',
-              } 
-
-
+              },
+            ':focus':{
+                outline:'none',
+            },
+           
+            
         };
        
         const city = this.state.city;
