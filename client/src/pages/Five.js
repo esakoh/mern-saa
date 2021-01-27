@@ -195,17 +195,21 @@ onKeyUP= (e) => {
     <div>
      {date1}  <br /> <br />{deg1} <br /> <br /> <img src={img1} alt=""/> <br /> {wind1} 
     </div>
+    <br />
     <div >
-    {date2}<br /> <br />{deg2} <br /> <br /><img src={img2} alt=""/> <br /> {wind2} 
+    {date2}<br /> <br />{deg2} <br /> <br /><img src={img2} alt=""/> <br /> {wind2}
     </div>
+    <br />
     <div>
-    {date3} <br />  <br />{deg3} <br />  <br /><img src={img3} alt=""/> <br /> {wind3} 
+    {date3} <br />  <br />{deg3} <br />  <br /><img src={img3} alt=""/> <br /> {wind3}
     </div>
+    <br />
     <div>
-    {date4}<br />  <br />{deg4} <br />  <br /><img src={img4} alt=""/> <br /> {wind4} 
+    {date4}<br />  <br />{deg4} <br />  <br /><img src={img4} alt=""/> <br /> {wind4}
     </div>
+    <br />
     <div>
-    {date5}<br />  <br />{deg5} <br />  <br /><img src={img5} alt=""/> <br /> {wind5} 
+    {date5}<br />  <br />{deg5} <br />  <br /><img src={img5} alt=""/> <br /> {wind5}
     </div>
    
     </div>
