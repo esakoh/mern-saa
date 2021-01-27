@@ -6,14 +6,13 @@ import FiveDay from './pages/Five';
 import History from './pages/History';
 import Main from './pages/Main';
 import NaviLinks from './pages/NaviLinks';
-import './App.css';
 
 
 const App = () => {
     return (
-     
-      <Router className="App">     
-      <NaviLinks />
+      
+      <Router >     
+      <NaviLinks className="App" />
       <main>
       <Switch>
       <Route path="/" exact>
@@ -31,11 +30,9 @@ const App = () => {
      </Switch>
      </main>
       </Router>
-     
-      
+
     );
     
   }
-
 
 export default App;
