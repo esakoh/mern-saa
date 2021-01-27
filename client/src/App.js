@@ -17,15 +17,13 @@ const App = () => {
       <Switch>
       <Route path="/" exact>
         <Main />
-      </Route>
-     
+      </Route>  
       <Route path="/five/" exact>
         <FiveDay />
      </Route>
      <Route path="/history/" exact>
         <History />
-     </Route>
-     
+     </Route>   
      <Redirect to="/" />
      </Switch>
      </main>
