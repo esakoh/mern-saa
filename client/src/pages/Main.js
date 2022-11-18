@@ -16,7 +16,6 @@ class Main extends Component {
  constructor(props) {
     super();
     this.state = {
-    data: [],
     city:'',
     time: '',
     deg: '',
